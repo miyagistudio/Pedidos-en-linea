@@ -402,9 +402,8 @@ function add(id) {
 }
 
 function addToCart(id, variant) {
-  const key = variant ? id + '|' + variant : id;
+  const key = id;
   cart[key] = (cart[key] || 0) + 1;
-  if (!cart[id + '_base']) cart[id + '_base'] = id; // track base id
   rItems();
 }
 
